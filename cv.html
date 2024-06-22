@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Data Engineer Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Berkshire+Swash&display=swap" rel="stylesheet">
+<script>
+    // Get the current date
+    var today = new Date();
+  
+    // Array of month names
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  
+    // Format the date
+    var formattedDate = months[today.getMonth()] + ' ' + today.getDate() + ', ' + today.getFullYear();
+  
+    // Display the date in the specified paragraph
+    document.getElementById('currentDate').innerHTML = formattedDate;
+  </script>
+
+
+    <style>
+        /* Set A4 paper size */
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+     
+  @media print {
+    .container {
+      /* box-shadow: 0px 0px 0px 0px white; */
+      margin-bottom: 0px;
+    }
+  }
+        body {
+            /* font-family: Arial, sans-serif;  */
+            font-family: Verdana, sans-serif;
+            margin: 0;
+            background-color: #fff;
+            color: #000;
+            font-size: 14px;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            /* align-items: center; */
+			/* justify-content: center; */
+            flex-direction: row;
+            width: 210mm;
+            /* A4 width */
+            height: 297mm;
+            /* A4 height Was 295*/
+            margin-bottom: 50px;
+    /* box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2); */
+        }
+
+        .left {
+            width: 26%;
+            /* height: 100%; */
+            /* height: 255mm; */
+            /* A4 height */
+            background-color: #1C509E;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-between; */
+            padding: 20px;
+            color: #fff;
+        }
+
+        .left .section {
+            margin-top: 20px;
+        }
+
+        .right {
+            width: 66.67%;
+            /* height: 100%; */
+            /* height: 255mm; */
+            /* A4 height */
+            /* background-color: #D9D9D9; */
+            display: flex;
+            flex-direction: column;
+            /*justify-content: space-between;*/
+            padding: 20px;
+        }
+
+        .right .section {
+            margin-top: 10px;
+        }
+
+        
+        .name {
+            /* margin-top: 40%; */
+        }
+
+        .name h1 {
+            /* background-color: #123569; */
+            /* color: #fff; */
+            font-size: xxx-large;
+            margin-block-start: 0;
+            /* padding: 5px; */
+            /* margin: 0; */
+        }
+        .name .fnf {
+            /* font-family: 'Lucida Calligraphy New', sans-serif; */
+            /* font-family: 'Great Vibes', cursive; */
+            font-family: 'Berkshire Swash', cursive;
+            font-size: 80px;
+            color: #ffb703
+
+
+        }
+        .name .firstname {
+            font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+            /* font-family: 'Great Vibes', cursive; */
+            font-size: 60px;
+        }
+
+        .name .lastname {
+            /* font-family: Nyala; */
+            font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+            float: right;
+        }
+
+        .job-title {
+            font-family: Optima;
+            /* color: azure; */
+            float: right;
+            padding-right: 5px;
+        }
+        .personal-info {
+            margin-top: 20px;
+        }
+        .personal-info-list {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            height: 25px;
+        }
+
+        .personal-info-list img {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+        .personal-info-list i {
+            margin-right: 10px;
+            font-size: 17px;
+            /*height: 20px;*/
+        }
+        /* .personal-info-list p { */
+            /* line-height: 2em;} */
+        .skills {
+            /* margin-top: 10px; */
+             /*padding-top: 40px; */
+
+        }
+
+        .skill-name {
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+            font-weight:bold;
+        }
+
+
+        .skill-bar {
+            background-color: #D9D9D9;
+            height: 16px;
+            margin-bottom: 5px;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .skill-level {
+            position: absolute;
+            /* right: 0; */
+            top: 0;
+            height: 100%;
+            width: var(--level, 0%);
+            background-color: #123569;
+            border-radius: 10px;
+            transition: width 0.5s;
+        }
+
+        .right-section {
+            margin-top: 30px;
+        }
+        .right p{
+            line-height: 2em;
+        }
+        .right .title {
+  color: #1C509E;
+  /* border-bottom: 1px solid #1C509E; */
+  margin-bottom: 2px;
+}
+
+.left .title {font-size: 1.6em;
+}
+        .job-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .job-table td {
+            padding: 6px;
+            border: none;
+
+        }
+/* 
+        .title {
+            color: #1C509E;
+            /* color: white; 
+            font-weight: bold;
+            border-bottom: 1px solid black;
+        } */
+
+        .job-name {
+            font-weight: bold;
+        }
+        .company-line td {
+            
+            padding-top:0;
+            padding-bottom:0;
+        }
+        .company-name{
+            font-size: 12px;
+            font-style: italic;
+            color: gray;
+        }
+
+        .period {
+            font-size: 12px;
+            font-style: italic;
+            color: gray;
+            /* width: 30%; */
+            float: right;
+        }
+        .company-icon {
+            width: 10%;
+        }
+        .company-icon img {
+            width: 28px;
+            border-radius: 50%;
+            float: right;
+            
+        }
+
+        .job-description {
+            padding-left: 20px;
+        }
+
+        .job-description ul {
+            line-height: 2em;
+
+            margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+        /* 
+        .work-experience,
+        .education {
+            margin-bottom: 30px;
+        }
+
+        .work-experience h4,
+        .education h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .work-experience p,
+        .education p {
+            font-size: 14px;
+            margin: 0;
+        } 
+
+        .profile {
+            margin-top: 30px; 
+        }*/
+        .right .hr{
+        margin-top: 0;
+    margin-right: 87%;
+    border-bottom: 4px solid #1C509E;
+    border-radius: 10px;}
+        .profile h2 {
+            font-size: x-large;
+/* margin: 0; */
+/* border-bottom: none; */
+        }
+
+        .badge {
+            display: inline-block;
+    border-radius: 5px;
+    /* background-color: #1C509E; */
+    background-color: #D9D9D9;
+    color: black;
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 1.1;
+    width: 90%;
+    margin: 8px 0px 0px 0px;
+    vertical-align: middle;
+}
+
+.badge img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  
+  vertical-align: middle;
+}
+.badge-name {
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.coverletter p{
+    line-height: 1.5em;
+}
+
+.letterhead p {
+    font-size: 10px;
+    line-height: 1.3em;
+}
+.sign {
+    font-family: 'Allura', cursive;
+}
+    </style>
+</head>
+
+
+
+<body>
+
+    
+    <div class="container">
+        <div class="left">
+            <div class="name">
+                <h1><span class="firstname"><span class="fnf">K</span>AY</span> <span class="lastname">WANG</span></h1>
+                <h2 class="job-title">Azure Data Engineer</h2>
+            </div>
+            <div class="personal-info">
+                <!--
+                <div class="personal-info-list">
+                    <img src="image/phone.png" alt="Phone">
+                    <p>(613)-890-5489</p>
+                </div>
+                <div class="personal-info-list">
+                    <img src="image/email.png" alt="Email">
+                    <p>kay.yf.wang@gmail.com</p>
+                </div>
+                <div class="personal-info-list">
+                    <img src="image/location.png" alt="Location">
+                    <p>Hamilton, ON <br> (Willing to relocate to NS)</p>
+                </div>
+                -->
+                <div class="personal-info-list">
+                    <i class="fas fa-phone fa-lg"></i>
+                    <p>(613)-890-5489</p>
+                  </div>
+                  <div class="personal-info-list">
+
+                    <i class="fas fa-envelope fa-lg"></i>
+                    <p>kay.yf.wang@gmail.com</p>
+                  </div>
+                  <div class="personal-info-list">
+                    <i class="fas fa-map-marker-alt fa-lg"></i>
+                    <p>Hamilton, ON <br>(Willing to relocate to NS)</p>
+                  </div>
+            </div>
+
+            
+        </div>
+
+        <div class="right">
+            <div class="section coverletter">
+                
+                
+                <div class ="letterhead">
+                    <p>Nov 27, 2023</p><br>
+                    <p>CGI(Halifax)</p>
+                    <p>7071 Bayers Rd Suite 1007,</p>
+                    <p>Halifax,NS B3L 2C2</p>
+                    
+                </div>
+                <br>
+<div><p>RE: Data Engineer with Azure, J1123-1062</p></div>
+<br>
+                <div>
+                    <p>Dear Hiring Manager,</p>
+                    <p>I am excited to express my interest in the Data Engineer with Azure position at CGI(Halifax). With 6 years of working experience and a passion for data Engineering, I am confident that my skills and experience make me an excellent fit for this role.</p>
+                    <p>I have a strong work ethic and am a reliable team player. I prioritize delivering the best code quality and optimizing application performance. In my past projects, I have consistently delivered high-quality work that has earned me a reputation as a trusted team member.</p>
+                    <p>My experience in SQL and data integration is extensive. I have worked on several projects involving database design, data modeling, and data migration. I have a proven track record of optimizing database performance by modifying table indices and procedures, resulting in a 200% reduction in query time. I am confident that I can bring this expertise to CGI's Software Development team and make a valuable contribution to the company.</p>
+                    <p>As a life-long learner, I continuously seek to improve my skills and knowledge to stay updated with the latest technologies and methodologies in the field of data Engineering. For instance, I self-learned Azure, which has enabled me to broaden my skill set and stay up-to-date with industry trends. I am committed to staying up-to-date and bringing the latest knowledge to CGI's Software Development team.</p>
+                    <p>I am excited about the opportunity to work at CGI and be part of the company's culture of collaboration and teamwork. I welcome the chance to provide further insight into my programming knowledge and learn more about CGI's needs. Thank you for considering my candidacy for this position.</p>
+                    <br>
+                    <p>Sincerely,</p>
+                    <h2 class="sign">Kay(Yanfang) Wang</h2>
+                    <p>Kay(Yanfang) Wang</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left">
+            <div class="name">
+                <h1><span class="firstname"><span class="fnf">K</span>AY</span> <span class="lastname">WANG</span></h1>
+                <h2 class="job-title">Azure Data Engineer</h2>
+            </div>
+            <div class="personal-info">
+                <!--div class="personal-info-list">
+                    <img src="image/phone.png" alt="Phone">
+                    <p>(613)-890-5489</p>
+                </div>
+                <div class="personal-info-list">
+                    <img src="image/email.png" alt="Email">
+                    <p>kay.yf.wang@gmail.com</p>
+                </div>
+                <div class="personal-info-list">
+                    <img src="image/location.png" alt="Location">
+                    <p>Hamilton, ON <br>(Willing to relocate to NS)</p>
+                </div-->
+                
+                <div class="personal-info-list">
+                    <i class="fas fa-phone fa-lg"></i>
+                    <p>(613)-890-5489</p>
+                  </div>
+                  <div class="personal-info-list">
+
+                    <i class="fas fa-envelope fa-lg"></i>
+                    <p>kay.yf.wang@gmail.com</p>
+                  </div>
+                  <div class="personal-info-list">
+                    <i class="fas fa-map-marker-alt fa-lg"></i>
+                    <p>Hamilton, ON <br>(Willing to relocate to NS)</p>
+                  </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="title">Certifications</h2>
+                <!-- <hr class="hr"> -->
+            
+                  <div class="badge">
+                    <img src="image/dp203.png" alt="badge icon">
+                    <span class="badge-name">Azure Data Engineer</span>
+                  </div>
+            
+            
+                  <div class="badge">
+                     <img src="image/dp203.png" alt="badge icon">
+                    <span class="badge-name">Azure Administrator</span>
+                  </div>
+                  
+                  <div class="badge">
+                    <img src="image/dp203.png" alt="badge icon">
+                   <span class="badge-name">MS DevOps Engineer</span>
+                 </div>
+           </div>
+            
+            <div class="section skills">
+                <h2 class="title">Skills</h2>
+                <p class="skill-name">SQL</p>
+                <div class="skill-bar">
+                    <div class="skill-level" style="--level: 100%;"></div>
+                </div>
+                
+                <p class="skill-name">Python</p>
+                <div class="skill-bar">
+                    <div class="skill-level" style="--level: 80%;"></div>
+                </div>
+
+                <p class="skill-name">Azure Data Factory</p>
+                <div class="skill-bar">
+                    <div class="skill-level" style="--level: 70%;"></div>
+                </div>
+
+                <p class="skill-name">REST APIs</p>
+                <div class="skill-bar">
+                    <div class="skill-level" style="--level: 80%;"></div>
+                </div>
+                
+                <p class="skill-name">Azure</p>
+                <div class="skill-bar">
+                    <div class="skill-level" style="--level: 70%;"></div>
+                </div>
+
+                <p class="skill-name">Databricks</p>
+                <div class="skill-bar">
+                    <div class="skill-level" style="--level: 60%;"></div>
+                </div>
+
+                <p class="skill-name">Microservice</p>
+                <div class="skill-bar">
+                    <div class="skill-level" style="--level: 80%;"></div>
+                </div>
+                
+
+                <p class="skill-name">HDFS</p>
+                <div class="skill-bar">
+                    <div class="skill-level" style="--level: 60%;"></div>
+                </div>
+            </div>
+
+            
+            
+            
+        </div>
+
+        <div class="right">
+            
+            <div class="section profile">
+                <h2 class="title">Summary</h2>
+                <hr class = "hr">
+                <p>Experienced Data Engineer proficient in designing, implementing, maintaining and optimizing data solutions. A collaborative team player with a consistent history of successfully delivering high-quality projects.</p>
+            </div>
+        
+
+            
+            <div class="section">
+                <h2 class="title">Work Experience</h2>
+                <hr class = "hr">
+
+
+                <table class="job-table">
+                    <tr>
+                        <td colspan="2" class="job-name">Application(Data) Developer</td>
+                        <!--<td rowspan="2" class="company-icon"><img src="image/evenica.png" alt="Company Icon"></td>-->
+                    </tr>
+                    <tr  class="company-line">
+                        <td class="company-name">&nbsp;&nbsp;Evenica - Burlington, ON</td>
+                        <td class="period">2017.09 - Present</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="job-description">
+                            <ul>
+                                <li>Spearheaded the development of ADF data infrastructure, enabling the management of 10TB+ of data sources.</li>
+                                <li>Optimized database performance by modifying table indices and procedures, resulting in a 200% reduction in query time.</li>
+                                <li>Implemented 10+ customized scalable cloud data solutions, effectively addressing complex data management requirements.</li>
+                                <li>Enhanced customer communication, significantly increasing satisfaction, and cultivating enduring client relationships.</li>
+                                <li>Recognized as the Most Positive Employee of the Year(2019)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <table class="job-table">
+                    <tr>
+                        <td colspan="2" class="job-name">Azure DevOps Developer</td>
+                        <!--<td rowspan="2" class="company-icon"><img src="image/evenica.png" alt="Company Icon"></td>-->
+                    </tr>
+                    <tr class="company-line">
+                        <td class="company-name">&nbsp;&nbsp;Evenica - Burlington, ON</td>
+                        <td class="period">2022.05 - Present</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="job-description">
+                            <ul><li>Launched the deployment of the company's DevOps infrastructure, developed 50+ pipelines, achieving a 30% improvement in code security.</li>
+                                <li>Collaborated closely with cross-functional teams to diagnose and enhance system architecture.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <!--
+            <div class="section">
+                <h2 class="title">Projects</h2>
+                <hr class = "hr">
+                <table class="job-table">
+                    <tr>
+                        <td colspan="3" class="job-name">Data Integration</td>
+                        </tr>
+                    <tr>
+                        <td colspan="3" class="job-description">
+                            <ul>Designed and implemented APIs to deliver high availability solutions for eCommerce sites by using C#, Python, and SQL.
+                                Designed ETL component which was implemented very successfully.
+                                Modified databases to enhance performance, which saved 200% query time.
+                                
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+       -->
+
+        <div class="section">
+                <h2 class="title">Education & Training</h2>
+                <hr class = "hr">
+                <table class="job-table">
+                    <tr>
+                        <td colspan="2" class="job-name">Big Data Training </td>
+                        <!--<td rowspan="2" class="company-icon">
+                             <img src="image/it21.png" alt="Company Icon"> 
+                        </td>-->
+                    </tr>
+                    <tr class="company-line">
+                        <td class="company-name">&nbsp;&nbsp;IT21 Learning - Markham, ON</td>
+                        <td class="period">2018.11 – 2019.11</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="job-description">
+                            <ul><li>Related Courses: HDFS, Spark, Scala, Databricks</li></ul>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="job-table">
+                    <tr>
+                        <td colspan="2" class="job-name">Software Support Diploma</td>
+                        <!-- <td rowspan="2" class="company-icon">
+                            <img src="image/mohawk.png" alt="Company Icon">
+                        </td> -->
+                    </tr>
+                    <tr class="company-line">
+                        <td class="company-name">&nbsp;&nbsp;Mohawk College - Hamilton, ON</td>
+                        <td class="period">2015.09 – 2017.04</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="job-description">
+                            <ul><li>Amazebot Java Programming Competition 2nd place in 2016</li>
+                                <li> Awarded “Dean’s Honors in 2015”</li></ul>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="job-table">
+                    <tr>
+                        <td colspan="2" class="job-name">Biological Sciences Degree</td>
+                        <!-- <td rowspan="2" class="company-icon">
+                            <img src="image/sdu.png" alt="Company Icon"> 
+                        </td>-->
+                    </tr>
+                    <tr class="company-line">
+                        <td class="company-name">&nbsp;&nbsp;Shandong University - China</td>
+                        <td class="period">2009.09 – 2013.04</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="job-description">
+                            <!--ul><li>Related Selected Courses: Economics</li>
+                            </ul-->
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
